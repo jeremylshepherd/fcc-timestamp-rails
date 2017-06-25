@@ -1,26 +1,20 @@
+# API Basejump: Timestamp microservice
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+> User stories:
+> 
+> #### 1) I can pass a string as a parameter, and it will check to see whether that string contains either a Unix timestamp* or a natural language date (example: January 1, 2016)
+> 
+> #### 2) If it does, it returns both the Unix timestamp* and the natural language form of that date.
+> 
+> #### 3) If it does not contain a date or Unix timestamp*, it returns null for those properties.
+> 
+> ##### _*In seconds, for milliseconds multiply result by 1000_
 
+### Example usage:
 
-Welcome to your Rails project on Cloud9 IDE!
+`https://jeremylshepherd-timestamp-rail.herokuapp.com/date/December%2015,%202015`
+`https://jeremylshepherd-timestamp-rail.herokuapp.com/date/1450137600`
 
-To get started, just do the following:
+### Example output:
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://fcc-micro-services-rails-jeremylshepherd.c9users.io/).
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
-
-rails s -b $IP -p $PORT
+`{ "unix": 1450137600, "natural": "December 15, 2015" }`
