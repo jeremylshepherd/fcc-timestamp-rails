@@ -15,6 +15,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+#Update potential vulnerabilities
+gem 'loofah', '~> 2.2.1'
+gem 'nokogiri', '~> 1.8.1'
+
 # Use Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
